@@ -1,4 +1,4 @@
-package cz.microshop.users;
+package cz.microshop.shipping;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

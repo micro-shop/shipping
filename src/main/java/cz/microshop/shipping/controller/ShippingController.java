@@ -29,4 +29,9 @@ public class ShippingController {
     public ResponseEntity<Shipping> find(@RequestParam String name)   {
         return new ResponseEntity<>(shippingService.findByName(name), HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/save", method = RequestMethod.POST, produces = "application/json")
+    public ResponseEntity<Shipping> save(@RequestBody Shipping shipping)   {
+        return new ResponseEntity<>(shippingService.save(shipping), HttpStatus.OK);
+    }
 }

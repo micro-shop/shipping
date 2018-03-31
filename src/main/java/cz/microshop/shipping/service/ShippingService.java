@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class ShippingService {
@@ -19,5 +20,12 @@ public class ShippingService {
 
     public Shipping findByName(String name) {
         return shippingRepository.findByName(name);
+    }
+
+    public Shipping save(Shipping shipping) {
+        if (shipping.getShippingId() == null) {
+            shipping.setShippingId(UUID.randomUUID().getMostSignificantBits() & Long.MAX_VALUE);
+        }
+        return shippingRepository.save(shipping);
     }
 }

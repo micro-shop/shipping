@@ -7,15 +7,16 @@ import java.math.BigDecimal;
 public class Shipping {
 
     @Id
-    private Long id;
+    private String id;
+    private Long shippingId;
     private String name;
     private BigDecimal price;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -33,5 +34,13 @@ public class Shipping {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Long getShippingId() {
+        return shippingId;
+    }
+
+    public void setShippingId(Long shippingId) {
+        this.shippingId = shippingId;
     }
 }
