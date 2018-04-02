@@ -1,0 +1,19 @@
+<mongoChangeLog>
+    <changeSet>
+        <script>
+            db.getCollection("shipping").insert({
+            "shippingId" : 1, "name": "DHL", "price" : 499.0
+            })
+        </script>
+        <script>
+            db.getCollection("shipping").insert({
+            "shippingId" : 2, "name": "Česká pošta", "price" : 250.0
+            })
+        </script>
+        <script>
+            db.getCollection("shipping").insert({
+            "shippingId" : 3, "name": "PPL", "price" : 290.0
+            })
+        </script>
+    </changeSet>
+</mongoChangeLog>
