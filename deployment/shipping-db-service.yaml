@@ -5,7 +5,7 @@ metadata:
   name: shipping-db
   labels:
     name: shipping-db
-  namespace: default
+  namespace: microshop
 spec:
   ports:
     # the port that this service should serve on
